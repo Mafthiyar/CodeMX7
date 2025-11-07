@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CodeMX7 — Interviews, Tutorials & Code Examples</title>
+  <meta name="description" content="CodeMX7 — Programming interview questions, basic code examples and tutorials for Java, C, Python, C++, MySQL and more.">
+  <meta name="keywords" content="programming, interview questions, java, c, python, cpp, mysql, code examples, tutorials">
+  <meta name="author" content="Mafthiyar Shaik">
+  <!-- SEO structured data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"CodeMX7",
+    "url":"https://example.com/",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://example.com/?s={search_term_string}",
+      "query-input":"required name=search_term_string"
+    }
+  }
+  </script>
+  <style>
+    :root{--bg:#0b0a10;--panel:#120b23;--accent:#7c3aed;--muted:#bfc7d6;--card:#0f0d16}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial;background:linear-gradient(180deg,var(--bg),#050407);color:var(--muted);-webkit-font-smoothing:antialiased}
+    a{color:var(--accent);text-decoration:none}
+    .container{max-width:1100px;margin:18px auto;padding:16px}
+    header{background:linear-gradient(90deg,#0f0714, #1b0e2a);padding:18px;border-radius:10px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#4c1d95);display:flex;align-items:center;justify-content:center;font-weight:800;color:white}
+    nav{margin-top:8px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    nav a{color:var(--muted);padding:8px 10px;border-radius:8px;background:transparent}
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:16px;margin-top:18px}
+    .card{background:linear-gradient(180deg,var(--card),#141018);padding:16px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+    h1{margin:0;color:white}
+    .search{display:flex;gap:8px;margin-top:12px}
+    input[type="search"]{flex:1;padding:10px;border-radius:8px;border:1px solid #2b2437;background:transparent;color:var(--muted)}
+    button{padding:10px 12px;border-radius:8px;border:0;background:var(--accent);color:white;font-weight:700}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
+    .lang-list{display:flex;flex-direction:column;gap:6px}
+    .snippet{background:#020209;padding:12px;border-radius:8px;color:#dfe7ff;overflow:auto}
+    .article-list{display:flex;flex-direction:column;gap:10px}
+    .meta{color:#98a0b0;font-size:13px}
+    footer{margin-top:24px;text-align:center;color:#8f97a5}
+    @media(max-width:980px){.hero{grid-template-columns:1fr} .grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:560px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div class="brand">
+          <div class="logo">MX</div>
+          <div>
+            <div style="font-weight:800;color:white">CodeMX7</div>
+            <div style="font-size:13px;color:var(--muted)">Interview Qs • Code Examples • Tutorials</div>
+          </div>
+        </div>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#tutorials">Tutorials</a>
+          <a href="#interview">Interview Qs</a>
+          <a href="#languages">Languages</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <section id="home" class="hero">
+      <div>
+        <div class="card">
+          <h1>Learn & Prepare — All languages, one place</h1>
+          <p class="meta">Java, C, C++, Python, JavaScript, MySQL, Go, Rust... interview questions and basic code examples organized cleanly for quick study.</p>
+          <div class="search">
+            <input id="q" type="search" placeholder="Search: e.g. java loop, python list" aria-label="search">
+            <button onclick="doSearch()">Search</button>
+          </div>
+
+          <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+            <a class="button" href="#interview" style="background:transparent;border:1px solid #2b2235;padding:10px 12px;border-radius:8px;color:var(--muted)">Start Interview Prep</a>
+            <a class="button" href="#tutorials" style="background:transparent;border:1px solid #2b2235;padding:10px 12px;border-radius:8px;color:var(--muted)">Browse Tutorials</a>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3 style="margin:0;color:white">Popular Languages</h3>
+          <div style="margin-top:10px" class="lang-list">
+            <a href="#java">Java</a>
+            <a href="#python">Python</a>
+            <a href="#c">C</a>
+            <a href="#cpp">C++</a>
+            <a href="#mysql">MySQL</a>
+            <a href="#javascript">JavaScript</a>
+          </div>
+          <hr style="border:none;height:1px;background:#221631;margin:12px 0">
+          <div style="font-size:13px;color:var(--muted)">Subscribe for updates (email capture simulated)</div>
+          <form onsubmit="alert('Simulated: integrate Mailchimp or Formspree to collect emails');return false" style="margin-top:8px">
+            <input placeholder="email@example.com" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #23162a;background:transparent;color:var(--muted)">
+            <button style="width:100%;margin-top:8px">Subscribe</button>
+          </form>
+        </div>
+      </aside>
+    </section>
+
+    <section id="tutorials" style="margin-top:16px">
+      <div class="card">
+        <h2 style="color:white">Tutorials & Basic Codes</h2>
+        <p class="meta">Short examples and explanations for quick learning.</p>
+        <div class="grid" style="margin-top:14px">
+          <div class="card">
+            <h3 id="java">Java — Basics</h3>
+            <p class="meta">Syntax, OOP, Collections, Common Programs</p>
+            <div class="snippet" style="margin-top:8px"><pre>// Java: Hello World
+class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello, CodeMX7!");
+  }
+}
+</pre></div>
+            <a href="#java-interview" style="display:inline-block;margin-top:8px">View Java Interview Qs →</a>
+          </div>
+
+          <div class="card">
+            <h3 id="python">Python — Basics</h3>
+            <p class="meta">Syntax, lists, dicts, common scripts</p>
+            <div class="snippet" style="margin-top:8px"><pre># Python: Hello World
+print('Hello, CodeMX7!')
+</pre></div>
+            <a href="#python-interview" style="display:inline-block;margin-top:8px">View Python Interview Qs →</a>
+          </div>
+
+          <div class="card">
+            <h3 id="c">C — Basics</h3>
+            <p class="meta">Pointers, arrays, string handling</p>
+            <div class="snippet" style="margin-top:8px"><pre>// C: Hello
+#include <stdio.h>
+int main(){
+  printf("Hello, CodeMX7!\n");
+  return 0;
+}
+</pre></div>
+            <a href="#c-interview" style="display:inline-block;margin-top:8px">View C Interview Qs →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="interview" style="margin-top:16px">
+      <div class="card">
+        <h2 style="color:white">Interview Questions</h2>
+        <p class="meta">Organized by language — quick answers + links to full explanations.</p>
+
+        <!-- Example index listing for languages -->
+        <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:12px">
+          <div style="flex:1;min-width:260px" class="card">
+            <h3 id="java-interview">Java — Top Questions</h3>
+            <ol class="article-list">
+              <li><a href="#q1-java">What is the difference between JDK, JRE and JVM?</a></li>
+              <li><a href="#q2-java">Explain OOP concepts with examples.</a></li>
+              <li><a href="#q3-java">How does garbage collection work in Java?</a></li>
+            </ol>
+          </div>
+
+          <div style="flex:1;min-width:260px" class="card">
+            <h3 id="python-interview">Python — Top Questions</h3>
+            <ol class="article-list">
+              <li>Difference between lists and tuples</li>
+              <li>Explain GIL (Global Interpreter Lock)</li>
+              <li>How to manage virtual environments</li>
+            </ol>
+          </div>
+
+          <div style="flex:1;min-width:260px" class="card">
+            <h3 id="c-interview">C — Top Questions</h3>
+            <ol class="article-list">
+              <li>What is a pointer? Explain with example.</li>
+              <li>How does memory allocation work in C?</li>
+              <li>Explain segmentation fault causes.</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Sample expanded Q + answer for Java Q1 -->
+        <article style="margin-top:16px" class="card">
+          <h3 id="q1-java">What is the difference between JDK, JRE and JVM?</h3>
+          <p class="meta">Short answer</p>
+          <p><strong>JVM</strong> is the Java Virtual Machine that runs Java bytecode. <strong>JRE</strong> is the Java Runtime Environment that contains the JVM and libraries to run Java programs. <strong>JDK</strong> is the Java Development Kit which includes the JRE plus developer tools (compiler, debugger).</p>
+          <p style="font-size:13px;color:var(--muted)">Want full detailed article with examples and diagrams — create a dedicated page file like <code>java/jdk-vs-jre-vs-jvm.html</code>.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="languages" style="margin-top:16px">
+      <div class="card">
+        <h2 style="color:white">All Languages (Index)</h2>
+        <p class="meta">Click any language to view curated interview questions and basic codes.</p>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px">
+          <a href="#java">Java</a>
+          <a href="#python">Python</a>
+          <a href="#c">C</a>
+          <a href="#cpp">C++</a>
+          <a href="#javascript">JavaScript</a>
+          <a href="#mysql">MySQL</a>
+          <a href="#go">Go</a>
+          <a href="#rust">Rust</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:16px">
+      <div class="card">
+        <h3>Contact & Sponsorship</h3>
+        <p class="meta">Email: <a href="mailto:mafthyar@gmail.com">mafthyar@gmail.com</a></p>
+        <p class="meta">Want this site to be indexed fast? Add sitemap.xml, verify in Google Search Console, and publish articles with clear titles and headings. (Steps included below.)</p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+          <div>&copy; <span id="year"></span> CodeMX7 — Mafthiyar Shaik</div>
+          <div class="meta">Designed for fast reading, SEO-ready templates included</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Helpful notes and files to add to your repo: -->
+    <!--
+      1) sitemap.xml (place at site root):
+      <?xml version="1.0" encoding="UTF-8"?>
+      <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+        <url><loc>https://yourdomain.com/</loc><priority>1.0</priority></url>
+        <url><loc>https://yourdomain.com/java/jdk-vs-jre-vs-jvm.html</loc><priority>0.8</priority></url>
+        <!-- add all article URLs here -->
+      </urlset>
+
+      2) robots.txt (place at site root):
+      User-agent: *
+      Allow: /
+      Sitemap: https://yourdomain.com/sitemap.xml
+
+      3) For SEO: add a per-article meta description and JSON-LD Article schema. Example (inside article page):
+      <script type="application/ld+json">{ "@context":"https://schema.org","@type":"Article","headline":"What is JVM?","author":"Mafthiyar Shaik","datePublished":"2025-11-07","url":"https://yourdomain.com/java/jvm-explained.html" }</script>
+
+      4) To bulk add interview question pages: create a folder `data/` with JSON files per language (see example below) and a small script to convert each into an HTML page.
+
+      Example JSON (data/java-questions.json):
+      {
+        "language":"Java",
+        "questions":[
+          {"q":"What is JVM?","a":"JVM is..."},
+          {"q":"Explain OOP concepts","a":"OOP stands for..."}
+        ]
+      }
+
+      Use a simple Node.js script (or Python) to read JSON and produce HTML files with proper titles and headings so Google can index them.
+    -->
+
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function doSearch(){
+      const q = document.getElementById('q').value.trim();
+      if(!q) return alert('Type something to search');
+      // Simple client-side search hint. For SEO and real search, rely on Google indexing and internal site search.
+      alert('Search simulated: use Google site search (site:yourdomain.com "'+q+'") or implement server-side search.');
+    }
+  </script>
+</body>
+</html>
